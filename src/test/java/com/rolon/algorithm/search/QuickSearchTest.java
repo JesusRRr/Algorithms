@@ -8,5 +8,14 @@ import java.util.stream.Stream;
 
 public class QuickSearchTest {
 
+    static Stream<Arguments> arguments() {
+        return Stream.of(
+                Arguments.of(new int[]{1, 2, 3, 4, 5}, 1)
+        );
+    }
+    @ParameterizedTest
+    @MethodSource("arguments")
+    public void checkSearch(int[] elements,int value){
 
+    }
 }
