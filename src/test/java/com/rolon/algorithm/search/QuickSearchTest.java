@@ -1,5 +1,6 @@
 package com.rolon.algorithm.search;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -7,6 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 public class QuickSearchTest {
+    QuickSearch quickSearch;
 
     static Stream<Arguments> arguments() {
         return Stream.of(
@@ -16,6 +18,7 @@ public class QuickSearchTest {
     @ParameterizedTest
     @MethodSource("arguments")
     public void checkSearch(int[] elements,int value){
-        System.out.println(elements[0]);
+        Assertions.assertEquals(true,quickSearch.search(elements,value));
+
     }
 }
