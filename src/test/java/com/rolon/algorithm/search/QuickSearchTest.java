@@ -16,6 +16,6 @@ public class QuickSearchTest {
     @ParameterizedTest
     @MethodSource("arguments")
     public void checkSearch(int[] elements,int value){
-
+        System.out.println(elements[0]);
     }
 }
